@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #252525;
+}
+
+.main-div {
+  color: aliceblue;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+}
+
+.pokemon-display {
+  width: 75%;
+  background-color: rgb(25, 25, 25);
+  border-radius: 10px;
+}
+
+.pokemon {
+  margin: 10px;
+  height: 250px;
+  background-color: #252525;
+  border: red solid 1px;
+  border-radius: 10px;
+}
