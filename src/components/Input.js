@@ -8,6 +8,7 @@ const Input = ({ setName, handleClick, name }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+
         <button className="btn btn-primary m-2" onClick={handleClick}>
           Submit
         </button>
