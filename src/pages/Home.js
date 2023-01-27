@@ -8,7 +8,7 @@ import Error from "../components/Error";
 import "../styles.css";
 
 // TODO
-// Flabebe/hypenated name error
+// Try to put all functions into a single file for export.
 // Try to remove use of pokeNames
 
 const MAX_PARTY_SIZE = 6;
@@ -29,7 +29,7 @@ function Home() {
 
   const deleteMon = (monName) => {
     setPokeNames(pokeNames.filter((pName) => pName !== monName));
-    setData(data.filter((obj) => obj.species.name !== monName));
+    setData(data.filter((obj) => obj.name !== monName));
   };
 
   const handleClick = () => {
@@ -52,6 +52,7 @@ function Home() {
             setData([...data, obj]);
             setPokeNames([...pokeNames, pName]);
             setErrors(false, false, false);
+            console.log(pokeNames);
           })
           .catch((err) => {
             setErrors(false, false, true);

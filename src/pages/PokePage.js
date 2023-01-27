@@ -15,7 +15,8 @@ const PokePage = () => {
   const capitalize = (name) => name.charAt(0).toUpperCase() + name.slice(1);
 
   const getImgURL = (id) => {
-    return id < 650
+    return data.sprites.versions["generation-v"]["black-white"].animated
+      .front_default !== null
       ? data.sprites.versions["generation-v"]["black-white"].animated
           .front_default
       : data.sprites.front_default;
@@ -51,7 +52,7 @@ const PokePage = () => {
       .catch((err) => {
         setError(true);
       });
-  }, []);
+  }, [pName]);
 
   return (
     <div className="main-div mt-5">
